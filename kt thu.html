@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function InDay() {
+            var thu = document.getElementById("td").value;
+            if (thu >= 1 && thu <= 7) {
+                if (thu == 1) {
+                    thu = "Thu 2";
+                }
+                else if (thu == 2) {
+                    thu = "Thu 3";
+                } else if (thu == 3) {
+                    thu = "Thu 4";
+                } else if (thu == 4) {
+                    thu = "Thu 5";
+                } else if (thu == 5) {
+                    thu = "Thu 6";
+                } else if (thu == 6) {
+                    thu = "Thu 7";
+                }
+                else {
+                    thu = "Chu nhat";
+                }
+            } else {
+                thu = "Phai nhap thu tu 1 den 7";
+            }
+            document.getElementById('demo').innerHTML = thu;
+        }
+    </script>
+
+    <label>Today</label>
+    <input type="number" id="td">
+    <button onclick="InDay()">Try it</button>
+    <p id="demo"></p>
+</body>
+</html>
